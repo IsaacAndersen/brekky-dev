@@ -248,12 +248,12 @@ export default function OneTaskPage() {
             <Step
               number="02"
               title="Focus."
-              description="The timer runs. Pause if you need to. That is it. No other tasks competing for your attention."
+              description="The timer runs. Pause if you need to. Nothing else competing for your attention."
             />
             <Step
               number="03"
               title="Reflect."
-              description="When you are done, take a beat. How did it feel? Great, okay, bad? Add a note if you want. Move on."
+              description="Done? Rate how it felt. Add a note if you want. Move on."
             />
           </div>
         </section>
@@ -287,9 +287,8 @@ export default function OneTaskPage() {
               opacity: 0.75,
             }}
           >
-            Most productivity apps help you manage more tasks. 1Task forces you
-            to pick one. There is no second task. There is no queue. You finish
-            what you started, or you abandon it and start something else.
+            Most productivity apps help you manage more tasks. 1Task only
+            lets you have one. Pick something, do it, reflect on how it went.
           </p>
           <p
             style={{
@@ -300,10 +299,9 @@ export default function OneTaskPage() {
               opacity: 0.75,
             }}
           >
-            The reflection after each task is not journaling. It is just a
-            moment to notice how work actually feels. Over time, you start to
-            see patterns in your focus, your energy, and what kind of work drains
-            you.
+            The reflection after each task builds up over time. You start to
+            see patterns in your focus, your energy, and what kind of work
+            drains you.
           </p>
         </section>
 
@@ -351,11 +349,11 @@ export default function OneTaskPage() {
             />
             <Feature
               title="Reflection"
-              description="Sentiment rating and notes after each task. Not journaling. Just a moment to notice how work feels."
+              description="Sentiment rating and notes after each task. Builds self-awareness without the overhead of journaling."
             />
             <Feature
               title="Privacy by architecture"
-              description="All data on device. No account. No sync. No tracking. No analytics SDK. Delete the app and it is all gone."
+              description="All data stays on your device. No account, no sync, no tracking."
             />
           </div>
         </section>
