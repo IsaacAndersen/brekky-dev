@@ -6,8 +6,6 @@
   --color-brand-btn: rgb(45, 45, 42);
   --color-brand-btn-text: rgb(234, 230, 221);
   --color-input-bg: rgba(45, 45, 42, 0.06);
-  --font-heading: "Young Serif", serif;
-  --font-body: "Bitter", serif;
 }
 
 *,
@@ -19,7 +17,7 @@
 body {
   background-color: var(--color-brand-bg);
   color: var(--color-brand-text);
-  font-family: var(--font-body);
+  font-family: var(--font-body), "Bitter", serif;
   font-size: 16px;
   margin: 0;
   overflow-x: hidden;
@@ -31,19 +29,18 @@ body {
   white-space: nowrap;
   width: 100%;
   padding: 8px 0;
-  position: relative;
   -webkit-mask-image: linear-gradient(
     to right,
     transparent 0%,
-    black 8%,
-    black 92%,
+    black 6%,
+    black 94%,
     transparent 100%
   );
   mask-image: linear-gradient(
     to right,
     transparent 0%,
-    black 8%,
-    black 92%,
+    black 6%,
+    black 94%,
     transparent 100%
   );
 }
@@ -82,7 +79,7 @@ body {
   border: 2px solid transparent;
   border-radius: 15px 0px;
   padding: 10px 20px;
-  font-family: var(--font-body);
+  font-family: var(--font-body), "Bitter", serif;
   font-size: 16px;
   color: var(--color-brand-text);
   width: 100%;
@@ -100,7 +97,7 @@ body {
   border: 2px solid transparent;
   border-radius: 15px 0px;
   padding: 10px 20px;
-  font-family: var(--font-body);
+  font-family: var(--font-body), "Bitter", serif;
   font-size: 16px;
   color: var(--color-brand-text);
   width: 100%;
@@ -121,7 +118,7 @@ body {
   border-radius: 45px 0px;
   border: none;
   padding: 32px 48px;
-  font-family: var(--font-body);
+  font-family: var(--font-body), "Bitter", serif;
   font-size: 16px;
   cursor: pointer;
   transition: opacity 0.2s;
@@ -134,4 +131,28 @@ body {
 
 .send-btn:disabled {
   opacity: 0.6;
+}
+
+/* Responsive grids */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px;
+}
+
+.name-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+@media (min-width: 768px) {
+  .contact-grid {
+    grid-template-columns: 1fr 1.7fr;
+    gap: 64px;
+  }
+
+  .name-grid {
+    grid-template-columns: 1fr 1fr;
+  }
 }

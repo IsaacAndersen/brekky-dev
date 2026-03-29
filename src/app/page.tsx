@@ -35,6 +35,14 @@ function Marquee({
   );
 }
 
+const heading = {
+  fontFamily: "var(--font-heading), 'Young Serif', serif",
+} as const;
+
+const body = {
+  fontFamily: "var(--font-body), 'Bitter', serif",
+} as const;
+
 export default function Home() {
   const [formData, setFormData] = useState({
     firstName: "",
@@ -67,7 +75,7 @@ export default function Home() {
       {/* Header */}
       <header
         style={{
-          padding: "0 50px",
+          padding: "0 clamp(20px, 4vw, 50px)",
           height: 80,
           display: "flex",
           alignItems: "center",
@@ -76,7 +84,7 @@ export default function Home() {
         <a
           href="/"
           style={{
-            fontFamily: "var(--font-heading)",
+            ...heading,
             fontSize: 23,
             letterSpacing: "-0.5px",
             color: "var(--color-brand-text)",
@@ -97,224 +105,147 @@ export default function Home() {
         </section>
 
         {/* Contact Section */}
-        <section style={{ padding: "68px 50px 80px" }}>
+        <section style={{ padding: "68px clamp(20px, 4vw, 50px) 80px" }}>
           <div
             style={{
               maxWidth: 1200,
               margin: "0 auto",
-              display: "grid",
-              gridTemplateColumns: "1fr 1.7fr",
-              gap: 64,
             }}
           >
-            {/* Left - Text */}
-            <div>
-              <h1
-                style={{
-                  fontFamily: "var(--font-heading)",
-                  fontSize: 62,
-                  lineHeight: 1.06,
-                  letterSpacing: "-0.02em",
-                  fontWeight: 400,
-                  marginBottom: 32,
-                }}
-              >
-                Contact Us
-              </h1>
-              <p
-                style={{
-                  fontFamily: "var(--font-body)",
-                  fontSize: 16,
-                  lineHeight: "24px",
-                  marginTop: 16,
-                  marginBottom: 16,
-                }}
-              >
-                Brekky Labs is a software development studio based in
-                Pittsburgh, PA.
-              </p>
-              <p
-                style={{
-                  fontFamily: "var(--font-body)",
-                  fontSize: 16,
-                  lineHeight: "24px",
-                  marginTop: 16,
-                  marginBottom: 16,
-                }}
-              >
-                We get excited with creative design and ideas that stir the pot.
-              </p>
-              <p
-                style={{
-                  fontFamily: "var(--font-body)",
-                  fontSize: 16,
-                  lineHeight: "24px",
-                  marginTop: 16,
-                }}
-              >
-                Stay tuned for what&apos;s cooking.
-              </p>
-            </div>
-
-            {/* Right - Form */}
-            <div>
-              {submitted ? (
-                <div
+            <div className="contact-grid">
+              {/* Left - Text */}
+              <div>
+                <h1
                   style={{
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    height: "100%",
+                    ...heading,
+                    fontSize: "clamp(40px, 5vw, 62px)",
+                    lineHeight: 1.06,
+                    letterSpacing: "-0.02em",
+                    fontWeight: 400,
+                    marginBottom: 32,
                   }}
                 >
-                  <p
+                  Contact Us
+                </h1>
+                <p style={{ ...body, fontSize: 16, lineHeight: "24px", marginTop: 16, marginBottom: 16 }}>
+                  Brekky Labs is a software development studio based in
+                  Pittsburgh, PA.
+                </p>
+                <p style={{ ...body, fontSize: 16, lineHeight: "24px", marginTop: 16, marginBottom: 16 }}>
+                  We get excited with creative design and ideas that stir the pot.
+                </p>
+                <p style={{ ...body, fontSize: 16, lineHeight: "24px", marginTop: 16 }}>
+                  Stay tuned for what&apos;s cooking.
+                </p>
+              </div>
+
+              {/* Right - Form */}
+              <div>
+                {submitted ? (
+                  <div
                     style={{
-                      fontFamily: "var(--font-heading)",
-                      fontSize: 30,
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      height: "100%",
                     }}
                   >
-                    Thank you!
-                  </p>
-                </div>
-              ) : (
-                <form onSubmit={handleSubmit}>
-                  {/* Name */}
-                  <fieldset
-                    style={{
-                      border: "none",
-                      padding: 0,
-                      margin: 0,
-                      marginBottom: 20,
-                    }}
-                  >
-                    <legend
+                    <p style={{ ...heading, fontSize: 30 }}>Thank you!</p>
+                  </div>
+                ) : (
+                  <form onSubmit={handleSubmit}>
+                    {/* Name */}
+                    <fieldset
                       style={{
-                        fontFamily: "var(--font-body)",
-                        fontSize: 16,
-                        fontWeight: 600,
-                        marginBottom: 8,
+                        border: "none",
+                        padding: 0,
+                        margin: 0,
+                        marginBottom: 20,
                       }}
                     >
-                      Name
-                    </legend>
-                    <div
-                      style={{
-                        display: "grid",
-                        gridTemplateColumns: "1fr 1fr",
-                        gap: 16,
-                      }}
-                    >
-                      <div>
-                        <label
-                          style={{
-                            fontFamily: "var(--font-body)",
-                            fontSize: 12,
-                            display: "block",
-                            marginBottom: 4,
-                          }}
-                        >
-                          First Name{" "}
-                          <span style={{ opacity: 0.6 }}>(required)</span>
-                        </label>
-                        <input
-                          className="form-input"
-                          type="text"
-                          required
-                          value={formData.firstName}
-                          onChange={(e) =>
-                            setFormData({
-                              ...formData,
-                              firstName: e.target.value,
-                            })
-                          }
-                        />
+                      <legend
+                        style={{
+                          ...body,
+                          fontSize: 16,
+                          fontWeight: 600,
+                          marginBottom: 8,
+                        }}
+                      >
+                        Name
+                      </legend>
+                      <div className="name-grid">
+                        <div>
+                          <label style={{ ...body, fontSize: 12, display: "block", marginBottom: 4 }}>
+                            First Name{" "}
+                            <span style={{ opacity: 0.6 }}>(required)</span>
+                          </label>
+                          <input
+                            className="form-input"
+                            type="text"
+                            required
+                            value={formData.firstName}
+                            onChange={(e) =>
+                              setFormData({ ...formData, firstName: e.target.value })
+                            }
+                          />
+                        </div>
+                        <div>
+                          <label style={{ ...body, fontSize: 12, display: "block", marginBottom: 4 }}>
+                            Last Name{" "}
+                            <span style={{ opacity: 0.6 }}>(required)</span>
+                          </label>
+                          <input
+                            className="form-input"
+                            type="text"
+                            required
+                            value={formData.lastName}
+                            onChange={(e) =>
+                              setFormData({ ...formData, lastName: e.target.value })
+                            }
+                          />
+                        </div>
                       </div>
-                      <div>
-                        <label
-                          style={{
-                            fontFamily: "var(--font-body)",
-                            fontSize: 12,
-                            display: "block",
-                            marginBottom: 4,
-                          }}
-                        >
-                          Last Name{" "}
-                          <span style={{ opacity: 0.6 }}>(required)</span>
-                        </label>
-                        <input
-                          className="form-input"
-                          type="text"
-                          required
-                          value={formData.lastName}
-                          onChange={(e) =>
-                            setFormData({
-                              ...formData,
-                              lastName: e.target.value,
-                            })
-                          }
-                        />
-                      </div>
+                    </fieldset>
+
+                    {/* Email */}
+                    <div style={{ marginBottom: 20 }}>
+                      <label style={{ ...body, fontSize: 16, display: "block", paddingBottom: 4 }}>
+                        Email <span style={{ opacity: 0.6 }}>(required)</span>
+                      </label>
+                      <input
+                        className="form-input"
+                        type="email"
+                        required
+                        value={formData.email}
+                        onChange={(e) =>
+                          setFormData({ ...formData, email: e.target.value })
+                        }
+                      />
                     </div>
-                  </fieldset>
 
-                  {/* Email */}
-                  <div style={{ marginBottom: 20 }}>
-                    <label
-                      style={{
-                        fontFamily: "var(--font-body)",
-                        fontSize: 16,
-                        display: "block",
-                        paddingBottom: 4,
-                      }}
-                    >
-                      Email{" "}
-                      <span style={{ opacity: 0.6 }}>(required)</span>
-                    </label>
-                    <input
-                      className="form-input"
-                      type="email"
-                      required
-                      value={formData.email}
-                      onChange={(e) =>
-                        setFormData({ ...formData, email: e.target.value })
-                      }
-                    />
-                  </div>
+                    {/* Message */}
+                    <div style={{ marginBottom: 20 }}>
+                      <label style={{ ...body, fontSize: 16, display: "block", paddingBottom: 4 }}>
+                        Message <span style={{ opacity: 0.6 }}>(required)</span>
+                      </label>
+                      <textarea
+                        className="form-textarea"
+                        required
+                        rows={4}
+                        value={formData.message}
+                        onChange={(e) =>
+                          setFormData({ ...formData, message: e.target.value })
+                        }
+                      />
+                    </div>
 
-                  {/* Message */}
-                  <div style={{ marginBottom: 20 }}>
-                    <label
-                      style={{
-                        fontFamily: "var(--font-body)",
-                        fontSize: 16,
-                        display: "block",
-                        paddingBottom: 4,
-                      }}
-                    >
-                      Message{" "}
-                      <span style={{ opacity: 0.6 }}>(required)</span>
-                    </label>
-                    <textarea
-                      className="form-textarea"
-                      required
-                      rows={4}
-                      value={formData.message}
-                      onChange={(e) =>
-                        setFormData({ ...formData, message: e.target.value })
-                      }
-                    />
-                  </div>
-
-                  {/* Submit */}
-                  <button
-                    type="submit"
-                    disabled={sending}
-                    className="send-btn"
-                  >
-                    {sending ? "Sending..." : "Send"}
-                  </button>
-                </form>
-              )}
+                    {/* Submit */}
+                    <button type="submit" disabled={sending} className="send-btn">
+                      {sending ? "Sending..." : "Send"}
+                    </button>
+                  </form>
+                )}
+              </div>
             </div>
           </div>
         </section>
@@ -322,7 +253,7 @@ export default function Home() {
 
       {/* Footer */}
       <footer style={{ padding: "32px 0", textAlign: "center" }}>
-        <p style={{ fontFamily: "var(--font-body)", fontSize: 14.5 }}>
+        <p style={{ ...body, fontSize: 14.5 }}>
           <strong>Brekky Labs, LLC</strong>
         </p>
       </footer>
