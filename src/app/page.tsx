@@ -253,8 +253,13 @@ export default function Home() {
 
       {/* Footer */}
       <footer style={{ padding: "32px 0", textAlign: "center" }}>
-        <p style={{ ...body, fontSize: 14.5 }}>
+        <p style={{ ...body, fontSize: 14.5, marginBottom: 8 }}>
           <strong>Brekky Labs, LLC</strong>
+        </p>
+        <p style={{ ...body, fontSize: 13, opacity: 0.5 }}>
+          <a href="/support" style={{ color: "var(--color-brand-text)" }}>Support</a>
+          {" · "}
+          <a href="/privacy" style={{ color: "var(--color-brand-text)" }}>Privacy</a>
         </p>
       </footer>
     </div>
