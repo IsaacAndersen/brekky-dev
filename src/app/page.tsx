@@ -99,9 +99,9 @@ export default function Home() {
       <main style={{ flex: 1 }}>
         {/* Marquee Section */}
         <section style={{ padding: "4px 0" }}>
-          <Marquee emoji="🥚" count={12} speed={24} />
-          <Marquee emoji="🐣" count={12} reverse speed={20} />
-          <Marquee emoji="🐥" count={12} speed={18} />
+          <Marquee emoji="🥚" count={16} speed={24} />
+          <Marquee emoji="🐣" count={16} reverse speed={20} />
+          <Marquee emoji="🐥" count={16} speed={18} />
         </section>
 
         {/* Contact Section */}
