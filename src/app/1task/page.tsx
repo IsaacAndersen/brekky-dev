@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "1Task: Focus timer — One thing at a time",
   description:
-    "Stop managing tasks. Start doing them. 1Task is a focus timer for iOS that forces you to work on one thing at a time.",
+    "1Task is a focus timer for iOS. One task at a time.",
 };
 
 const heading = {
