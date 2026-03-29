@@ -190,8 +190,8 @@ export default function OneTaskPage() {
               opacity: 0.75,
             }}
           >
-            1Task is a focus timer for iOS. One task, one timer, and a
-            moment to reflect when you are done.
+            1Task is a focus timer for iOS. Work on one thing at a time,
+            then reflect on how it went.
           </p>
           <AppStoreBadge />
 
@@ -352,7 +352,7 @@ export default function OneTaskPage() {
               description="Sentiment rating and notes after each task. Builds self-awareness without the overhead of journaling."
             />
             <Feature
-              title="Privacy by architecture"
+              title="Privacy first"
               description="All data stays on your device. No account, no sync, no tracking."
             />
           </div>
