@@ -190,8 +190,8 @@ export default function OneTaskPage() {
               opacity: 0.75,
             }}
           >
-            1Task is a focus timer for iOS. No lists. No priorities. Just one
-            task, one timer, and a moment to reflect when you are done.
+            1Task is a focus timer for iOS. One task, one timer, and a
+            moment to reflect when you are done.
           </p>
           <AppStoreBadge />
 
