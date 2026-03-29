@@ -14,21 +14,19 @@ function Marquee({
   speed?: number;
 }) {
   const items = Array.from({ length: count }, (_, i) => (
-    <span key={i} className="text-5xl md:text-7xl mx-3 md:mx-5 inline-block">
+    <span
+      key={i}
+      style={{ fontSize: 62, margin: "0 20px", display: "inline-block" }}
+    >
       {emoji}
     </span>
   ));
 
-  const duration = speed ?? 20;
-  const style = {
-    animationDuration: `${duration}s`,
-  };
-
   return (
-    <div className="marquee-container py-2">
+    <div className="marquee-container">
       <div
         className={reverse ? "marquee-track-reverse" : "marquee-track"}
-        style={style}
+        style={{ animationDuration: `${speed ?? 20}s` }}
       >
         {items}
         {items}
@@ -65,43 +63,95 @@ export default function Home() {
   }
 
   return (
-    <div className="min-h-screen flex flex-col">
+    <div style={{ minHeight: "100vh", display: "flex", flexDirection: "column" }}>
       {/* Header */}
-      <header className="px-6 md:px-12 py-6">
+      <header
+        style={{
+          padding: "0 50px",
+          height: 80,
+          display: "flex",
+          alignItems: "center",
+        }}
+      >
         <a
           href="/"
-          className="font-[family-name:var(--font-heading)] text-[23px] tracking-[-0.5px] no-underline"
-          style={{ color: "var(--color-brand-text)" }}
+          style={{
+            fontFamily: "var(--font-heading)",
+            fontSize: 23,
+            letterSpacing: "-0.5px",
+            color: "var(--color-brand-text)",
+            textDecoration: "none",
+          }}
         >
           Brekky Labs
         </a>
       </header>
 
       {/* Main */}
-      <main className="flex-1">
+      <main style={{ flex: 1 }}>
         {/* Marquee Section */}
-        <section className="py-6 md:py-10">
+        <section style={{ padding: "4px 0" }}>
           <Marquee emoji="🥚" count={12} speed={24} />
           <Marquee emoji="🐣" count={12} reverse speed={20} />
           <Marquee emoji="🐥" count={12} speed={18} />
         </section>
 
         {/* Contact Section */}
-        <section className="px-8 md:px-16 lg:px-24 py-16 md:py-24">
-          <div className="max-w-[1200px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16">
+        <section style={{ padding: "68px 50px 80px" }}>
+          <div
+            style={{
+              maxWidth: 1200,
+              margin: "0 auto",
+              display: "grid",
+              gridTemplateColumns: "1fr 1.7fr",
+              gap: 64,
+            }}
+          >
             {/* Left - Text */}
             <div>
-              <h1 className="font-[family-name:var(--font-heading)] text-[3.7rem] leading-[1.06] tracking-[-0.02em] font-normal mb-8">
+              <h1
+                style={{
+                  fontFamily: "var(--font-heading)",
+                  fontSize: 62,
+                  lineHeight: 1.06,
+                  letterSpacing: "-0.02em",
+                  fontWeight: 400,
+                  marginBottom: 32,
+                }}
+              >
                 Contact Us
               </h1>
-              <p className="font-[family-name:var(--font-body)] text-base mb-4">
+              <p
+                style={{
+                  fontFamily: "var(--font-body)",
+                  fontSize: 16,
+                  lineHeight: "24px",
+                  marginTop: 16,
+                  marginBottom: 16,
+                }}
+              >
                 Brekky Labs is a software development studio based in
                 Pittsburgh, PA.
               </p>
-              <p className="font-[family-name:var(--font-body)] text-base mb-4">
+              <p
+                style={{
+                  fontFamily: "var(--font-body)",
+                  fontSize: 16,
+                  lineHeight: "24px",
+                  marginTop: 16,
+                  marginBottom: 16,
+                }}
+              >
                 We get excited with creative design and ideas that stir the pot.
               </p>
-              <p className="font-[family-name:var(--font-body)] text-base">
+              <p
+                style={{
+                  fontFamily: "var(--font-body)",
+                  fontSize: 16,
+                  lineHeight: "24px",
+                  marginTop: 16,
+                }}
+              >
                 Stay tuned for what&apos;s cooking.
               </p>
             </div>
@@ -109,25 +159,65 @@ export default function Home() {
             {/* Right - Form */}
             <div>
               {submitted ? (
-                <div className="flex items-center justify-center h-full">
-                  <p className="font-[family-name:var(--font-heading)] text-3xl">
+                <div
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    height: "100%",
+                  }}
+                >
+                  <p
+                    style={{
+                      fontFamily: "var(--font-heading)",
+                      fontSize: 30,
+                    }}
+                  >
                     Thank you!
                   </p>
                 </div>
               ) : (
                 <form onSubmit={handleSubmit}>
                   {/* Name */}
-                  <fieldset className="border-none p-0 mb-5">
-                    <legend className="font-[family-name:var(--font-body)] text-base font-semibold mb-3">
+                  <fieldset
+                    style={{
+                      border: "none",
+                      padding: 0,
+                      margin: 0,
+                      marginBottom: 20,
+                    }}
+                  >
+                    <legend
+                      style={{
+                        fontFamily: "var(--font-body)",
+                        fontSize: 16,
+                        fontWeight: 600,
+                        marginBottom: 8,
+                      }}
+                    >
                       Name
                     </legend>
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div
+                      style={{
+                        display: "grid",
+                        gridTemplateColumns: "1fr 1fr",
+                        gap: 16,
+                      }}
+                    >
                       <div>
-                        <label className="font-[family-name:var(--font-body)] text-xs block mb-1">
+                        <label
+                          style={{
+                            fontFamily: "var(--font-body)",
+                            fontSize: 12,
+                            display: "block",
+                            marginBottom: 4,
+                          }}
+                        >
                           First Name{" "}
-                          <span className="opacity-60">(required)</span>
+                          <span style={{ opacity: 0.6 }}>(required)</span>
                         </label>
                         <input
+                          className="form-input"
                           type="text"
                           required
                           value={formData.firstName}
@@ -140,11 +230,19 @@ export default function Home() {
                         />
                       </div>
                       <div>
-                        <label className="font-[family-name:var(--font-body)] text-xs block mb-1">
+                        <label
+                          style={{
+                            fontFamily: "var(--font-body)",
+                            fontSize: 12,
+                            display: "block",
+                            marginBottom: 4,
+                          }}
+                        >
                           Last Name{" "}
-                          <span className="opacity-60">(required)</span>
+                          <span style={{ opacity: 0.6 }}>(required)</span>
                         </label>
                         <input
+                          className="form-input"
                           type="text"
                           required
                           value={formData.lastName}
@@ -160,11 +258,20 @@ export default function Home() {
                   </fieldset>
 
                   {/* Email */}
-                  <div className="mb-5">
-                    <label className="font-[family-name:var(--font-body)] text-xs block mb-1">
-                      Email <span className="opacity-60">(required)</span>
+                  <div style={{ marginBottom: 20 }}>
+                    <label
+                      style={{
+                        fontFamily: "var(--font-body)",
+                        fontSize: 16,
+                        display: "block",
+                        paddingBottom: 4,
+                      }}
+                    >
+                      Email{" "}
+                      <span style={{ opacity: 0.6 }}>(required)</span>
                     </label>
                     <input
+                      className="form-input"
                       type="email"
                       required
                       value={formData.email}
@@ -175,11 +282,20 @@ export default function Home() {
                   </div>
 
                   {/* Message */}
-                  <div className="mb-6">
-                    <label className="font-[family-name:var(--font-body)] text-xs block mb-1">
-                      Message <span className="opacity-60">(required)</span>
+                  <div style={{ marginBottom: 20 }}>
+                    <label
+                      style={{
+                        fontFamily: "var(--font-body)",
+                        fontSize: 16,
+                        display: "block",
+                        paddingBottom: 4,
+                      }}
+                    >
+                      Message{" "}
+                      <span style={{ opacity: 0.6 }}>(required)</span>
                     </label>
                     <textarea
+                      className="form-textarea"
                       required
                       rows={4}
                       value={formData.message}
@@ -193,7 +309,7 @@ export default function Home() {
                   <button
                     type="submit"
                     disabled={sending}
-                    className="send-btn mt-2"
+                    className="send-btn"
                   >
                     {sending ? "Sending..." : "Send"}
                   </button>
@@ -205,8 +321,8 @@ export default function Home() {
       </main>
 
       {/* Footer */}
-      <footer className="py-8 text-center">
-        <p className="font-[family-name:var(--font-body)] text-sm">
+      <footer style={{ padding: "32px 0", textAlign: "center" }}>
+        <p style={{ fontFamily: "var(--font-body)", fontSize: 14.5 }}>
           <strong>Brekky Labs, LLC</strong>
         </p>
       </footer>
