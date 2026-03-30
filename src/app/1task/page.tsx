@@ -195,22 +195,30 @@ export default function OneTaskPage() {
           </p>
           <AppStoreBadge />
 
-          {/* Screenshot placeholder */}
+          {/* Screenshots */}
           <div
             style={{
               marginTop: 60,
-              backgroundColor: "var(--color-input-bg)",
-              borderRadius: "15px 0px",
-              height: 400,
               display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              maxWidth: 700,
+              gap: 16,
+              overflowX: "auto" as const,
+              paddingBottom: 16,
+              maxWidth: "calc(100vw - clamp(40px, 8vw, 100px))",
             }}
           >
-            <p style={{ ...body, fontSize: 15, opacity: 0.3 }}>
-              Screenshots coming soon
-            </p>
+            {[1, 2, 3, 4].map((n) => (
+              <img
+                key={n}
+                src={`/screenshots/${n}.png`}
+                alt={`1Task screenshot ${n}`}
+                style={{
+                  height: 500,
+                  width: "auto",
+                  borderRadius: "12px",
+                  flexShrink: 0,
+                }}
+              />
+            ))}
           </div>
         </section>
 
