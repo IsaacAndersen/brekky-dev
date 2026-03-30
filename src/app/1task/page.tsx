@@ -22,19 +22,13 @@ function AppStoreBadge() {
       href={APP_STORE_URL}
       target="_blank"
       rel="noopener noreferrer"
-      style={{
-        display: "inline-block",
-        padding: "14px 28px",
-        backgroundColor: "var(--color-brand-btn)",
-        color: "var(--color-brand-btn-text)",
-        borderRadius: "45px 0px",
-        textDecoration: "none",
-        ...body,
-        fontSize: 16,
-        transition: "opacity 0.2s",
-      }}
+      style={{ display: "inline-block", transition: "opacity 0.2s" }}
     >
-      Download on the App Store
+      <img
+        src="/app-store-badge.svg"
+        alt="Download on the App Store"
+        style={{ height: 54 }}
+      />
     </a>
   );
 }
