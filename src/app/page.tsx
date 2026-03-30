@@ -183,7 +183,7 @@ export default function Home() {
                   Pittsburgh, PA.
                 </p>
                 <p style={{ ...body, fontSize: 16, lineHeight: "24px", marginTop: 16, marginBottom: 16 }}>
-                  We get excited with creative design and ideas that stir the pot.
+                  We get excited about ideas that stir the pot.
                 </p>
                 <p style={{ ...body, fontSize: 16, lineHeight: "24px", marginTop: 16 }}>
                   Stay tuned for what&apos;s cooking.
