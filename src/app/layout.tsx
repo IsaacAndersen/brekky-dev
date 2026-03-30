@@ -19,6 +19,9 @@ export const metadata: Metadata = {
   title: "Brekky Labs",
   description:
     "Brekky Labs is a software development studio based in Pittsburgh, PA.",
+  icons: {
+    icon: "/favicon.svg",
+  },
 };
 
 export default function RootLayout({
