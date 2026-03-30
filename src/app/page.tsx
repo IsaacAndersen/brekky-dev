@@ -104,6 +104,57 @@ export default function Home() {
           <Marquee emoji="🐥" count={16} speed={45} />
         </section>
 
+        {/* Apps Section */}
+        <section style={{ padding: "60px clamp(20px, 4vw, 50px) 0" }}>
+          <div style={{ maxWidth: 1200, margin: "0 auto" }}>
+            <h2
+              style={{
+                ...heading,
+                fontSize: "clamp(32px, 4vw, 44px)",
+                fontWeight: 400,
+                marginBottom: 32,
+                letterSpacing: "-0.02em",
+              }}
+            >
+              Our Apps
+            </h2>
+            <a
+              href="/1task"
+              style={{
+                display: "flex",
+                alignItems: "center",
+                gap: 20,
+                padding: "20px 24px",
+                backgroundColor: "var(--color-input-bg)",
+                borderRadius: "15px 0px",
+                textDecoration: "none",
+                color: "var(--color-brand-text)",
+                maxWidth: 480,
+                transition: "opacity 0.2s",
+              }}
+            >
+              <img
+                src="/app-icon.png"
+                alt="1Task app icon"
+                style={{
+                  width: 64,
+                  height: 64,
+                  borderRadius: 14,
+                  flexShrink: 0,
+                }}
+              />
+              <div>
+                <p style={{ ...heading, fontSize: 20, fontWeight: 400, marginBottom: 4 }}>
+                  1Task
+                </p>
+                <p style={{ ...body, fontSize: 14, opacity: 0.6 }}>
+                  Focus timer for iOS. One thing at a time.
+                </p>
+              </div>
+            </a>
+          </div>
+        </section>
+
         {/* Contact Section */}
         <section style={{ padding: "68px clamp(20px, 4vw, 50px) 80px" }}>
           <div
