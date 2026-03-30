@@ -229,7 +229,7 @@ export default function OneTaskPage() {
         {/* How It Works */}
         <section
           style={{
-            padding: "80px clamp(20px, 4vw, 50px)",
+            padding: "40px clamp(20px, 4vw, 50px)",
             maxWidth: 900,
             margin: "0 auto",
           }}
