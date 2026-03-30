@@ -166,10 +166,10 @@ export default function Home() {
             <div className="contact-grid">
               {/* Left - Text */}
               <div>
-                <h1
+                <h2
                   style={{
                     ...heading,
-                    fontSize: "clamp(40px, 5vw, 62px)",
+                    fontSize: "clamp(32px, 4vw, 44px)",
                     lineHeight: 1.06,
                     letterSpacing: "-0.02em",
                     fontWeight: 400,
@@ -177,7 +177,7 @@ export default function Home() {
                   }}
                 >
                   Contact Us
-                </h1>
+                </h2>
                 <p style={{ ...body, fontSize: 16, lineHeight: "24px", marginTop: 16, marginBottom: 16 }}>
                   Brekky Labs is a software development studio based in
                   Pittsburgh, PA.
