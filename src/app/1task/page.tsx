@@ -196,18 +196,33 @@ export default function OneTaskPage() {
           <AppStoreBadge />
 
           {/* Screenshots */}
-          <div className="screenshot-carousel">
-            <div className="screenshot-track">
-              {[1, 2, 3, 4].map((n) => (
-                <div key={n} className="screenshot-slide">
-                  <img
-                    src={`/screenshots/${n}.png`}
-                    alt={`1Task screenshot ${n}`}
-                    className="screenshot-img"
-                  />
-                </div>
-              ))}
-            </div>
+          <div
+            style={{
+              marginTop: 60,
+              display: "flex",
+              gap: 16,
+              overflowX: "auto" as const,
+              scrollSnapType: "x mandatory" as const,
+              scrollBehavior: "smooth" as const,
+              paddingBottom: 16,
+              maxWidth: "calc(100vw - clamp(40px, 8vw, 100px))",
+              scrollbarWidth: "none" as const,
+            }}
+          >
+            {[1, 2, 3, 4].map((n) => (
+              <img
+                key={n}
+                src={`/screenshots/${n}.png`}
+                alt={`1Task screenshot ${n}`}
+                style={{
+                  height: 500,
+                  width: "auto",
+                  borderRadius: "12px",
+                  flexShrink: 0,
+                  scrollSnapAlign: "start" as const,
+                }}
+              />
+            ))}
           </div>
         </section>
 
