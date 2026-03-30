@@ -155,18 +155,35 @@ export default function OneTaskPage() {
             margin: "0 auto",
           }}
         >
-          <p
+          <div
             style={{
-              ...body,
-              fontSize: 14,
-              letterSpacing: "0.05em",
-              textTransform: "uppercase" as const,
-              opacity: 0.4,
+              display: "flex",
+              alignItems: "center",
+              gap: 12,
               marginBottom: 16,
             }}
           >
-            1Task: Focus timer
-          </p>
+            <img
+              src="/app-icon.png"
+              alt="1Task app icon"
+              style={{
+                width: 48,
+                height: 48,
+                borderRadius: 11,
+              }}
+            />
+            <p
+              style={{
+                ...body,
+                fontSize: 14,
+                letterSpacing: "0.05em",
+                textTransform: "uppercase" as const,
+                opacity: 0.4,
+              }}
+            >
+              1Task: Focus timer
+            </p>
+          </div>
           <h1
             style={{
               ...heading,
