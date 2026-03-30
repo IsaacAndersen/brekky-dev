@@ -124,20 +124,6 @@ export default function OneTaskPage() {
         >
           Brekky Labs
         </a>
-        <a
-          href={APP_STORE_URL}
-          target="_blank"
-          rel="noopener noreferrer"
-          style={{
-            ...body,
-            fontSize: 14,
-            color: "var(--color-brand-text)",
-            textDecoration: "none",
-            opacity: 0.6,
-          }}
-        >
-          App Store
-        </a>
       </header>
 
       <main style={{ flex: 1 }}>
@@ -401,16 +387,6 @@ export default function OneTaskPage() {
           >
             One thing at a time.
           </h2>
-          <p
-            style={{
-              ...body,
-              fontSize: 17,
-              opacity: 0.6,
-              marginBottom: 32,
-            }}
-          >
-            Free on iPhone.
-          </p>
           <AppStoreBadge />
         </section>
       </main>
