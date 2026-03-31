@@ -301,8 +301,7 @@ export default function HeyoPage() {
               opacity: 0.7,
             }}
           >
-            The streak tracks your consistency. The blocking is just the
-            mechanism.
+            The streak tracks your consistency.
           </p>
         </section>
 
