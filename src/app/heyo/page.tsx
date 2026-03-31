@@ -144,22 +144,34 @@ export default function HeyoPage() {
             Coming soon to iOS
           </p>
 
-          {/* Screenshot placeholder */}
+          {/* Screenshots */}
           <div
             style={{
               marginTop: 60,
-              background: "linear-gradient(135deg, rgba(147, 112, 219, 0.06) 0%, rgba(147, 112, 219, 0.12) 100%)",
-              borderRadius: 16,
-              height: 400,
               display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              maxWidth: 700,
+              gap: 16,
+              overflowX: "auto" as const,
+              scrollSnapType: "x mandatory" as const,
+              scrollBehavior: "smooth" as const,
+              paddingBottom: 16,
+              maxWidth: "calc(100vw - clamp(40px, 8vw, 100px))",
+              scrollbarWidth: "none" as const,
             }}
           >
-            <p style={{ ...body, fontSize: 15, color: PURPLE, opacity: 0.4 }}>
-              Screenshots coming soon
-            </p>
+            {["1_1_locked", "2_4_message_prompts", "3_2_complete_streak", "4_3_shield", "5_5_progress"].map((name) => (
+              <img
+                key={name}
+                src={`/screenshots/heyo/${name}.png`}
+                alt={`heyo screenshot`}
+                style={{
+                  height: 500,
+                  width: "auto",
+                  borderRadius: "12px",
+                  flexShrink: 0,
+                  scrollSnapAlign: "start" as const,
+                }}
+              />
+            ))}
           </div>
         </section>
 
