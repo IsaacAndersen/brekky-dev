@@ -177,7 +177,7 @@ export default function Home() {
                     heyo
                   </p>
                   <p style={{ ...body, fontSize: 14, opacity: 0.6 }}>
-                    Stay close to the people that matter.
+                    Stay close to the people who matter.
                   </p>
                 </div>
               </a>

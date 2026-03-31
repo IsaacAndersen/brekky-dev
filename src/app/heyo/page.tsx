@@ -123,7 +123,7 @@ export default function HeyoPage() {
               color: "#2d2d2a",
             }}
           >
-            Stay close to the people that matter.
+            Stay close to the people who matter.
           </h1>
           <p
             style={{
