@@ -16,6 +16,7 @@ const bitter = Bitter({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://brekky.dev"),
   title: "Brekky Labs",
   description:
     "Brekky Labs is a software development studio based in Pittsburgh, PA.",
