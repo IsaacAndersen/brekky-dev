@@ -342,16 +342,8 @@ export default function HeyoPage() {
               description="Your favorites show up first. Friends you haven't talked to in a while get surfaced. One tap to message or call."
             />
             <Feature
-              title="Streaks"
-              description="Daily streak counter with a 7-day chart. See your consistency at a glance."
-            />
-            <Feature
               title="Flexible schedule"
               description="Block all day or set a custom window. Take a break when you need one. Pause entirely if life gets busy."
-            />
-            <Feature
-              title="Daily quotes"
-              description="A rotating quote about friendship and connection on your home screen. Subtle, not pushy."
             />
             <Feature
               title="Privacy first"
