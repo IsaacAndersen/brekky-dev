@@ -118,75 +118,70 @@ export default function Home() {
             >
               Our Apps
             </h2>
-            <a
-              href="/1task"
+            <div
               style={{
-                display: "flex",
-                alignItems: "center",
-                gap: 20,
-                padding: "20px 24px",
-                backgroundColor: "var(--color-input-bg)",
-                borderRadius: "15px 0px",
-                textDecoration: "none",
-                color: "var(--color-brand-text)",
-                maxWidth: 480,
-                transition: "opacity 0.2s",
+                display: "grid",
+                gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
+                gap: 16,
               }}
             >
-              <img
-                src="/app-icon.png"
-                alt="1Task app icon"
+              <a
+                href="/1task"
                 style={{
-                  width: 64,
-                  height: 64,
-                  borderRadius: 14,
-                  flexShrink: 0,
+                  display: "flex",
+                  alignItems: "center",
+                  gap: 20,
+                  padding: "20px 24px",
+                  backgroundColor: "var(--color-input-bg)",
+                  borderRadius: "15px 0px",
+                  textDecoration: "none",
+                  color: "var(--color-brand-text)",
+                  transition: "opacity 0.2s",
                 }}
-              />
-              <div>
-                <p style={{ ...heading, fontSize: 20, fontWeight: 400, marginBottom: 4 }}>
-                  1Task
-                </p>
-                <p style={{ ...body, fontSize: 14, opacity: 0.6 }}>
-                  Focus timer for iOS. One thing at a time.
-                </p>
-              </div>
-            </a>
-            <a
-              href="/heyo"
-              style={{
-                display: "flex",
-                alignItems: "center",
-                gap: 20,
-                padding: "20px 24px",
-                backgroundColor: "var(--color-input-bg)",
-                borderRadius: "15px 0px",
-                textDecoration: "none",
-                color: "var(--color-brand-text)",
-                maxWidth: 480,
-                marginTop: 12,
-                transition: "opacity 0.2s",
-              }}
-            >
-              <img
-                src="/heyo-icon.png"
-                alt="heyo app icon"
+              >
+                <img
+                  src="/app-icon.png"
+                  alt="1Task app icon"
+                  style={{ width: 64, height: 64, borderRadius: 14, flexShrink: 0 }}
+                />
+                <div>
+                  <p style={{ ...heading, fontSize: 20, fontWeight: 400, marginBottom: 4 }}>
+                    1Task
+                  </p>
+                  <p style={{ ...body, fontSize: 14, opacity: 0.6 }}>
+                    Focus timer for iOS. One thing at a time.
+                  </p>
+                </div>
+              </a>
+              <a
+                href="/heyo"
                 style={{
-                  width: 64,
-                  height: 64,
-                  borderRadius: 14,
-                  flexShrink: 0,
+                  display: "flex",
+                  alignItems: "center",
+                  gap: 20,
+                  padding: "20px 24px",
+                  backgroundColor: "var(--color-input-bg)",
+                  borderRadius: "15px 0px",
+                  textDecoration: "none",
+                  color: "var(--color-brand-text)",
+                  transition: "opacity 0.2s",
                 }}
-              />
-              <div>
-                <p style={{ ...heading, fontSize: 20, fontWeight: 400, marginBottom: 4 }}>
-                  heyo
-                </p>
-                <p style={{ ...body, fontSize: 14, opacity: 0.6 }}>
-                  Message a friend. Unlock your day.
-                </p>
-              </div>
-            </a>
+              >
+                <img
+                  src="/heyo-icon.png"
+                  alt="heyo app icon"
+                  style={{ width: 64, height: 64, borderRadius: 14, flexShrink: 0 }}
+                />
+                <div>
+                  <p style={{ ...heading, fontSize: 20, fontWeight: 400, marginBottom: 4 }}>
+                    heyo
+                  </p>
+                  <p style={{ ...body, fontSize: 14, opacity: 0.6 }}>
+                    Message a friend. Unlock your day.
+                  </p>
+                </div>
+              </a>
+            </div>
           </div>
         </section>
 
