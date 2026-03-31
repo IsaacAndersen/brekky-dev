@@ -242,17 +242,17 @@ export default function HeyoPage() {
             <Step
               number="01"
               title="Pick your apps."
-              description="Choose which apps to block. Social media, games, whatever you want to limit. heyo locks them each day."
+              description="Choose which apps to block. heyo locks them each day."
             />
             <Step
               number="02"
               title="Reach out."
-              description="Send a message to someone in your contacts. A friend, a family member, anyone real."
+              description="Send a message to someone in your contacts."
             />
             <Step
               number="03"
               title="Go about your day."
-              description="Apps unlock. Track your streak and see who you've been talking to."
+              description="Your apps are back. Track your streak and see who you've been talking to."
             />
           </div>
         </section>
