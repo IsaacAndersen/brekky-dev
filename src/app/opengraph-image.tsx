@@ -1,10 +1,13 @@
 import { ImageResponse } from "next/og";
+import { loadFonts } from "./og-fonts";
 
 export const alt = "Brekky Labs";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
 export default async function Image() {
+  const fonts = await loadFonts();
+
   return new ImageResponse(
     (
       <div
@@ -16,25 +19,23 @@ export default async function Image() {
           flexDirection: "column",
           alignItems: "center",
           justifyContent: "center",
-          padding: 80,
         }}
       >
-        <div style={{ fontSize: 80, marginBottom: 16 }}>🍳</div>
         <div
           style={{
-            fontSize: 64,
+            fontSize: 72,
+            fontFamily: "Young Serif",
             color: "rgb(45, 45, 42)",
-            fontWeight: 400,
-            letterSpacing: "-0.02em",
           }}
         >
           Brekky Labs
         </div>
         <div
           style={{
-            fontSize: 28,
+            fontSize: 26,
+            fontFamily: "Bitter",
             color: "rgb(45, 45, 42)",
-            opacity: 0.6,
+            opacity: 0.5,
             marginTop: 16,
           }}
         >
@@ -42,6 +43,6 @@ export default async function Image() {
         </div>
       </div>
     ),
-    { ...size }
+    { ...size, fonts }
   );
 }
