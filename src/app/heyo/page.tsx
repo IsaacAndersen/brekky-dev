@@ -123,7 +123,7 @@ export default function HeyoPage() {
               color: "#2d2d2a",
             }}
           >
-            Text someone before the scroll.
+            Stay close to the people that matter.
           </h1>
           <p
             style={{
