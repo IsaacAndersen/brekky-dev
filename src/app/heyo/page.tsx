@@ -288,7 +288,7 @@ export default function HeyoPage() {
               opacity: 0.7,
             }}
           >
-            heyo asks you to text someone before your apps unlock.
+            heyo asks you to text someone to unlock your apps.
             One message, then you&apos;re done.
           </p>
           <p
