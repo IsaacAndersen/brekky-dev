@@ -157,14 +157,12 @@ export default function OneTaskPage() {
             />
             <p
               style={{
-                ...body,
-                fontSize: 14,
-                letterSpacing: "0.05em",
-                textTransform: "uppercase" as const,
-                opacity: 0.4,
+                ...heading,
+                fontSize: 22,
+                letterSpacing: "-0.01em",
               }}
             >
-              1Task: Focus timer
+              1Task
             </p>
           </div>
           <h1

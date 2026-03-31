@@ -104,14 +104,13 @@ export default function HeyoPage() {
             />
             <p
               style={{
-                ...body,
-                fontSize: 14,
-                letterSpacing: "0.05em",
-                textTransform: "uppercase" as const,
+                ...heading,
+                fontSize: 22,
+                letterSpacing: "-0.01em",
                 color: PURPLE,
               }}
             >
-              heyo: reach out
+              heyo
             </p>
           </div>
           <h1
