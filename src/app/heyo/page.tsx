@@ -140,9 +140,18 @@ export default function HeyoPage() {
             the people, pick the apps. One text and everything opens
             back up.
           </p>
-          <p style={{ ...body, fontSize: 15, color: PURPLE }}>
-            Coming soon to iOS
-          </p>
+          <a
+            href="https://apps.apple.com/app/id6761399207"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ display: "inline-block", transition: "opacity 0.2s" }}
+          >
+            <img
+              src="/app-store-badge.svg"
+              alt="Download on the App Store"
+              style={{ height: 54 }}
+            />
+          </a>
 
           {/* Screenshots */}
           <div
@@ -230,9 +239,18 @@ export default function HeyoPage() {
           >
             One message to start the day.
           </h2>
-          <p style={{ ...body, fontSize: 15, color: PURPLE }}>
-            Coming soon to iOS
-          </p>
+          <a
+            href="https://apps.apple.com/app/id6761399207"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ display: "inline-block", transition: "opacity 0.2s" }}
+          >
+            <img
+              src="/app-store-badge.svg"
+              alt="Download on the App Store"
+              style={{ height: 54 }}
+            />
+          </a>
         </section>
       </main>
 
