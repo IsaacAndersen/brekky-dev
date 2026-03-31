@@ -181,9 +181,9 @@ export default function HeyoPage() {
               opacity: 0.7,
             }}
           >
-            Life gets busy. Friendships go quiet. heyo builds a small
-            daily habit: message someone you care about, then go about
-            your day.
+            Friendships go quiet when nobody makes the first move.
+            heyo makes that happen every day, before anything else
+            gets in the way.
           </p>
           <p
             style={{
@@ -243,18 +243,18 @@ export default function HeyoPage() {
           >
             <Step
               number="01"
-              title="Pick who matters."
-              description="Import your contacts and star the people you want to stay close to."
+              title="Add your people."
+              description="Import contacts, star the ones worth staying close to."
             />
             <Step
               number="02"
-              title="Send a message."
-              description="Each day, heyo suggests someone to reach out to. One text, one call. That's it."
+              title="Text someone."
+              description="heyo picks someone. Send a text, make a call. Takes 30 seconds."
             />
             <Step
               number="03"
-              title="See the habit build."
-              description="Track who you've been talking to and how often. Small consistency adds up."
+              title="That's it."
+              description="Apps unlock, streak goes up. Someone got a text today."
             />
           </div>
         </section>
@@ -277,7 +277,7 @@ export default function HeyoPage() {
               color: "#2d2d2a",
             }}
           >
-            Why it works.
+            The idea.
           </h2>
           <p
             style={{
@@ -290,9 +290,9 @@ export default function HeyoPage() {
               opacity: 0.7,
             }}
           >
-            Most people want to keep in touch but don&apos;t have a
-            system for it. heyo gives you one. Your selected apps stay
-            locked until you reach out to someone, so the habit sticks.
+            The scrolling is going to happen anyway. heyo just puts a
+            text message in front of it. Apps stay locked until someone
+            gets a message.
           </p>
           <p
             style={{
@@ -304,7 +304,8 @@ export default function HeyoPage() {
               opacity: 0.7,
             }}
           >
-            The streak tracks your consistency.
+            After a few weeks the blocking part fades. The texting
+            doesn&apos;t.
           </p>
         </section>
 
@@ -337,19 +338,19 @@ export default function HeyoPage() {
           >
             <Feature
               title="Smart suggestions"
-              description="Your favorites show up first. Friends you haven't talked to in a while get surfaced. One tap to message or call."
+              description="Favorites show up first. People who haven't heard from anyone in a while get bumped up. One tap to message or call."
             />
             <Feature
               title="App blocking"
-              description="Selected apps stay locked until you reach out to someone. Uses iOS Screen Time."
+              description="Selected apps stay locked until a message goes out. Uses iOS Screen Time."
             />
             <Feature
               title="Flexible schedule"
-              description="Block all day or set a custom window. Take a break when you need one. Pause entirely if life gets busy."
+              description="Block all day or set a custom window. Breaks and pauses built in."
             />
             <Feature
               title="Privacy first"
-              description="All data stays on your device. No account, no sync, no tracking."
+              description="All data stays on device. No account, no sync, no tracking."
             />
           </div>
         </section>
