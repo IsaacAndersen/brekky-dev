@@ -4,6 +4,9 @@ export const metadata: Metadata = {
   title: "heyo: reach out",
   description:
     "An iOS app that blocks selected apps until a message goes out.",
+  icons: {
+    icon: "/heyo-icon.png",
+  },
 };
 
 const heading = {

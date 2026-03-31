@@ -4,6 +4,9 @@ export const metadata: Metadata = {
   title: "1Task: Focus timer — One thing at a time",
   description:
     "1Task is a focus timer for iOS. One task at a time.",
+  icons: {
+    icon: "/app-icon.png",
+  },
 };
 
 const heading = {
