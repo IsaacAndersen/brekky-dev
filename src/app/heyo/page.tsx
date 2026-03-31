@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "heyo: reach out — Message a friend. Unlock your day.",
+  title: "heyo: reach out — Stay in touch with the people who matter.",
   description:
-    "heyo blocks your apps until you message someone.",
+    "heyo helps you build a daily habit of reaching out to friends and family.",
 };
 
 const heading = {
@@ -168,7 +168,7 @@ export default function HeyoPage() {
               color: "#2d2d2a",
             }}
           >
-            Message a friend. Unlock your day.
+            Stay in touch with the people who matter.
           </h1>
           <p
             style={{
@@ -181,7 +181,9 @@ export default function HeyoPage() {
               opacity: 0.7,
             }}
           >
-            heyo blocks your apps until you message someone.
+            Life gets busy. Friendships go quiet. heyo builds a small
+            daily habit: message someone you care about, then go about
+            your day.
           </p>
           <p
             style={{
@@ -241,18 +243,18 @@ export default function HeyoPage() {
           >
             <Step
               number="01"
-              title="Pick your apps."
-              description="Choose which apps to block. heyo locks them each day."
+              title="Pick who matters."
+              description="Import your contacts and star the people you want to stay close to."
             />
             <Step
               number="02"
-              title="Reach out."
-              description="Send a message to someone in your contacts."
+              title="Send a message."
+              description="Each day, heyo suggests someone to reach out to. One text, one call. That's it."
             />
             <Step
               number="03"
-              title="Go about your day."
-              description="Your apps are back. Track your streak and see who you've been talking to."
+              title="See the habit build."
+              description="Track who you've been talking to and how often. Small consistency adds up."
             />
           </div>
         </section>
@@ -275,7 +277,7 @@ export default function HeyoPage() {
               color: "#2d2d2a",
             }}
           >
-            The deal.
+            Why it works.
           </h2>
           <p
             style={{
@@ -288,8 +290,9 @@ export default function HeyoPage() {
               opacity: 0.7,
             }}
           >
-            heyo asks you to text someone to unlock your apps.
-            One message, then you&apos;re done.
+            Most people want to keep in touch but don&apos;t have a
+            system for it. heyo gives you one. Your selected apps stay
+            locked until you reach out to someone, so the habit sticks.
           </p>
           <p
             style={{
@@ -333,12 +336,12 @@ export default function HeyoPage() {
             }}
           >
             <Feature
-              title="App blocking"
-              description="Pick which apps to lock. They stay blocked until you reach out to someone. Uses iOS Screen Time, no workarounds."
-            />
-            <Feature
               title="Smart suggestions"
               description="Your favorites show up first. Friends you haven't talked to in a while get surfaced. One tap to message or call."
+            />
+            <Feature
+              title="App blocking"
+              description="Selected apps stay locked until you reach out to someone. Uses iOS Screen Time."
             />
             <Feature
               title="Flexible schedule"
@@ -346,7 +349,7 @@ export default function HeyoPage() {
             />
             <Feature
               title="Privacy first"
-              description="All data stays on your device. No account, no sync, no tracking. Delete the app and it's gone."
+              description="All data stays on your device. No account, no sync, no tracking."
             />
           </div>
         </section>
