@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "heyo: reach out — Message a friend. Unlock your day.",
   description:
-    "heyo blocks your apps until you message someone. A calm nudge toward real connection.",
+    "heyo blocks your apps until you message someone.",
 };
 
 const heading = {
@@ -181,8 +181,7 @@ export default function HeyoPage() {
               opacity: 0.7,
             }}
           >
-            heyo blocks your selected apps until you reach out to someone.
-            A quiet nudge toward real connection.
+            heyo blocks your apps until you message someone.
           </p>
           <p
             style={{
@@ -243,7 +242,7 @@ export default function HeyoPage() {
             <Step
               number="01"
               title="Pick your apps."
-              description="Choose which apps to block. Social media, games, whatever pulls you in. heyo locks them each day."
+              description="Choose which apps to block. Social media, games, whatever you want to limit. heyo locks them each day."
             />
             <Step
               number="02"
@@ -253,7 +252,7 @@ export default function HeyoPage() {
             <Step
               number="03"
               title="Go about your day."
-              description="Apps unlock. You've already done the hardest part. Track your streak and see who you've connected with."
+              description="Apps unlock. Track your streak and see who you've been talking to."
             />
           </div>
         </section>
@@ -276,7 +275,7 @@ export default function HeyoPage() {
               color: "#2d2d2a",
             }}
           >
-            A trade worth making.
+            The deal.
           </h2>
           <p
             style={{
@@ -289,8 +288,8 @@ export default function HeyoPage() {
               opacity: 0.7,
             }}
           >
-            You were going to check Instagram anyway. heyo just asks you to
-            text someone first. One message, then everything unlocks.
+            heyo asks you to text someone before your apps unlock.
+            One message, then you&apos;re done.
           </p>
           <p
             style={{
@@ -302,9 +301,8 @@ export default function HeyoPage() {
               opacity: 0.7,
             }}
           >
-            Over time, the streak builds. You start noticing which
-            friendships you&apos;ve been neglecting. The blocking becomes
-            secondary to the habit.
+            The streak tracks your consistency. The blocking is just the
+            mechanism.
           </p>
         </section>
 
