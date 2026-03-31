@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "heyo: reach out — Stay in touch with the people who matter.",
+  title: "heyo: reach out",
   description:
-    "heyo helps you build a daily habit of reaching out to friends and family.",
+    "An iOS app that blocks selected apps until a message goes out.",
 };
 
 const heading = {
@@ -31,47 +31,6 @@ function Feature({ title, description }: { title: string; description: string })
           fontSize: 20,
           fontWeight: 400,
           marginBottom: 6,
-          color: "#2d2d2a",
-        }}
-      >
-        {title}
-      </h3>
-      <p style={{ ...body, fontSize: 15, lineHeight: "24px", color: "#2d2d2a", opacity: 0.7 }}>
-        {description}
-      </p>
-    </div>
-  );
-}
-
-function Step({
-  number,
-  title,
-  description,
-}: {
-  number: string;
-  title: string;
-  description: string;
-}) {
-  return (
-    <div style={{ flex: 1, minWidth: 240 }}>
-      <p
-        style={{
-          ...body,
-          fontSize: 13,
-          color: PURPLE,
-          marginBottom: 6,
-          letterSpacing: "0.05em",
-          textTransform: "uppercase" as const,
-        }}
-      >
-        {number}
-      </p>
-      <h3
-        style={{
-          ...heading,
-          fontSize: 22,
-          fontWeight: 400,
-          marginBottom: 8,
           color: "#2d2d2a",
         }}
       >
@@ -138,11 +97,7 @@ export default function HeyoPage() {
             <img
               src="/heyo-icon.png"
               alt="heyo app icon"
-              style={{
-                width: 48,
-                height: 48,
-                borderRadius: 11,
-              }}
+              style={{ width: 48, height: 48, borderRadius: 11 }}
             />
             <p
               style={{
@@ -168,7 +123,7 @@ export default function HeyoPage() {
               color: "#2d2d2a",
             }}
           >
-            Stay in touch with the people who matter.
+            Text someone before the scroll.
           </h1>
           <p
             style={{
@@ -181,17 +136,11 @@ export default function HeyoPage() {
               opacity: 0.7,
             }}
           >
-            Friendships go quiet when nobody makes the first move.
-            heyo makes that happen every day, before anything else
-            gets in the way.
+            heyo locks selected apps until a message goes out. Pick
+            the people, pick the apps. One text and everything opens
+            back up.
           </p>
-          <p
-            style={{
-              ...body,
-              fontSize: 15,
-              color: PURPLE,
-            }}
-          >
+          <p style={{ ...body, fontSize: 15, color: PURPLE }}>
             Coming soon to iOS
           </p>
 
@@ -199,7 +148,7 @@ export default function HeyoPage() {
           <div
             style={{
               marginTop: 60,
-              background: `linear-gradient(135deg, rgba(147, 112, 219, 0.06) 0%, rgba(147, 112, 219, 0.12) 100%)`,
+              background: "linear-gradient(135deg, rgba(147, 112, 219, 0.06) 0%, rgba(147, 112, 219, 0.12) 100%)",
               borderRadius: 16,
               height: 400,
               display: "flex",
@@ -214,7 +163,7 @@ export default function HeyoPage() {
           </div>
         </section>
 
-        {/* How It Works */}
+        {/* Features */}
         <section
           style={{
             padding: "40px clamp(20px, 4vw, 50px) 80px",
@@ -222,113 +171,6 @@ export default function HeyoPage() {
             margin: "0 auto",
           }}
         >
-          <h2
-            style={{
-              ...heading,
-              fontSize: "clamp(32px, 4vw, 44px)",
-              fontWeight: 400,
-              marginBottom: 48,
-              letterSpacing: "-0.02em",
-              color: "#2d2d2a",
-            }}
-          >
-            How it works.
-          </h2>
-          <div
-            style={{
-              display: "flex",
-              gap: 40,
-              flexWrap: "wrap" as const,
-            }}
-          >
-            <Step
-              number="01"
-              title="Add your people."
-              description="Import contacts, star the ones worth staying close to."
-            />
-            <Step
-              number="02"
-              title="Text someone."
-              description="heyo picks someone. Send a text, make a call. Takes 30 seconds."
-            />
-            <Step
-              number="03"
-              title="That's it."
-              description="Apps unlock, streak goes up. Someone got a text today."
-            />
-          </div>
-        </section>
-
-        {/* Why */}
-        <section
-          style={{
-            padding: "60px clamp(20px, 4vw, 50px)",
-            maxWidth: 900,
-            margin: "0 auto",
-          }}
-        >
-          <h2
-            style={{
-              ...heading,
-              fontSize: "clamp(32px, 4vw, 44px)",
-              fontWeight: 400,
-              marginBottom: 20,
-              letterSpacing: "-0.02em",
-              color: "#2d2d2a",
-            }}
-          >
-            The idea.
-          </h2>
-          <p
-            style={{
-              ...body,
-              fontSize: 17,
-              lineHeight: "28px",
-              maxWidth: 600,
-              marginBottom: 16,
-              color: "#2d2d2a",
-              opacity: 0.7,
-            }}
-          >
-            The scrolling is going to happen anyway. heyo just puts a
-            text message in front of it. Apps stay locked until someone
-            gets a message.
-          </p>
-          <p
-            style={{
-              ...body,
-              fontSize: 17,
-              lineHeight: "28px",
-              maxWidth: 600,
-              color: "#2d2d2a",
-              opacity: 0.7,
-            }}
-          >
-            After a few weeks the blocking part fades. The texting
-            doesn&apos;t.
-          </p>
-        </section>
-
-        {/* Features */}
-        <section
-          style={{
-            padding: "60px clamp(20px, 4vw, 50px) 80px",
-            maxWidth: 900,
-            margin: "0 auto",
-          }}
-        >
-          <h2
-            style={{
-              ...heading,
-              fontSize: "clamp(32px, 4vw, 44px)",
-              fontWeight: 400,
-              marginBottom: 32,
-              letterSpacing: "-0.02em",
-              color: "#2d2d2a",
-            }}
-          >
-            Features.
-          </h2>
           <div
             style={{
               display: "grid",
@@ -338,7 +180,7 @@ export default function HeyoPage() {
           >
             <Feature
               title="Smart suggestions"
-              description="Favorites show up first. People who haven't heard from anyone in a while get bumped up. One tap to message or call."
+              description="Favorites first. People who haven't been contacted in a while get bumped up. One tap to message or call."
             />
             <Feature
               title="App blocking"
@@ -358,7 +200,7 @@ export default function HeyoPage() {
         {/* Bottom CTA */}
         <section
           style={{
-            padding: "60px clamp(20px, 4vw, 50px) 100px",
+            padding: "40px clamp(20px, 4vw, 50px) 100px",
             maxWidth: 900,
             margin: "0 auto",
             textAlign: "center" as const,
@@ -374,15 +216,9 @@ export default function HeyoPage() {
               color: "#2d2d2a",
             }}
           >
-            One message to start your day.
+            One message to start the day.
           </h2>
-          <p
-            style={{
-              ...body,
-              fontSize: 15,
-              color: PURPLE,
-            }}
-          >
+          <p style={{ ...body, fontSize: 15, color: PURPLE }}>
             Coming soon to iOS
           </p>
         </section>
