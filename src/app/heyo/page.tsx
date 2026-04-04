@@ -215,7 +215,7 @@ export default function HeyoPage() {
             />
             <Feature
               title="Privacy first"
-              description="All data stays on device. No account, no sync, no tracking."
+              description="Your data stays on your device. No account, no sync. Anonymous usage analytics only."
             />
           </div>
         </section>
