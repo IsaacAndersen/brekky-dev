@@ -82,8 +82,14 @@ export default function SupportPage() {
                 support@brekky.dev
               </a>
             </p>
+            <p style={{ ...body, fontSize: 16, lineHeight: "26px", marginBottom: 8 }}>
+              <strong>heyo support:</strong>{" "}
+              <a href="mailto:heyo+support@brekky.dev" style={{ color: "var(--color-brand-text)" }}>
+                heyo+support@brekky.dev
+              </a>
+            </p>
             <p style={{ ...body, fontSize: 16, lineHeight: "26px" }}>
-              <strong>One Task support:</strong>{" "}
+              <strong>1Task support:</strong>{" "}
               <a href="mailto:onetask+support@brekky.dev" style={{ color: "var(--color-brand-text)" }}>
                 onetask+support@brekky.dev
               </a>
@@ -112,13 +118,35 @@ export default function SupportPage() {
               }}
             >
               <h3 style={{ ...heading, fontSize: 22, fontWeight: 400, marginBottom: 8 }}>
-                One Task
+                <a href="/heyo" style={{ color: "inherit", textDecoration: "none" }}>heyo</a>
               </h3>
               <p style={{ ...body, fontSize: 15, lineHeight: "24px", marginBottom: 12 }}>
-                A single-task focus app for iOS. One Task helps you concentrate
+                heyo blocks selected apps until you message a friend. Pick the
+                people, pick the apps — one text and everything opens back up.
+                Stay close to the people who matter.
+              </p>
+              <p style={{ ...body, fontSize: 14, opacity: 0.6 }}>
+                <a href="https://apps.apple.com/app/id6761399207" target="_blank" rel="noopener noreferrer" style={{ color: "inherit" }}>
+                  iOS &middot; Available on the App Store
+                </a>
+              </p>
+            </div>
+
+            <div
+              style={{
+                backgroundColor: "var(--color-input-bg)",
+                borderRadius: "15px 0px",
+                padding: "24px 28px",
+                marginBottom: 16,
+              }}
+            >
+              <h3 style={{ ...heading, fontSize: 22, fontWeight: 400, marginBottom: 8 }}>
+                <a href="/1task" style={{ color: "inherit", textDecoration: "none" }}>1Task</a>
+              </h3>
+              <p style={{ ...body, fontSize: 15, lineHeight: "24px", marginBottom: 12 }}>
+                A single-task focus app for iOS. 1Task helps you concentrate
                 on what matters by letting you work on one thing at a time —
-                with built-in timers, reflections, and focus analytics. All your
-                data stays on your device.
+                with built-in timers, reflections, and focus analytics.
               </p>
               <p style={{ ...body, fontSize: 14, opacity: 0.6 }}>
                 iOS &middot; Coming soon
@@ -144,8 +172,11 @@ export default function SupportPage() {
                 Is my data stored in the cloud?
               </p>
               <p style={{ ...body, fontSize: 16, lineHeight: "26px" }}>
-                No. All Brekky Labs apps store data locally on your device. We
-                don&apos;t collect, sync, or transmit your personal data.
+                Your personal data stays on your device. We collect anonymous
+                usage analytics to improve our apps, but nothing is ever tied
+                to you individually. See our{" "}
+                <a href="/privacy" style={{ color: "var(--color-brand-text)" }}>privacy policy</a>{" "}
+                for details.
               </p>
             </div>
 
