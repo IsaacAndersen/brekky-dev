@@ -69,7 +69,7 @@ export default function PrivacyPage() {
             Privacy Policy
           </h1>
           <p style={{ ...body, fontSize: 14, opacity: 0.5, marginBottom: 32 }}>
-            Effective date: March 29, 2026
+            Effective date: April 3, 2026
           </p>
 
           <section style={sectionStyle}>
@@ -81,17 +81,29 @@ export default function PrivacyPage() {
               brekky.dev.
             </p>
             <p style={pStyle}>
-              The short version: <strong>we don&apos;t collect your data.</strong>{" "}
-              Our apps are designed to keep your information on your device.
+              The short version: <strong>we collect anonymous usage analytics to
+              improve our apps, but nothing is ever attributed to you
+              personally.</strong>{" "}
+              Your content and personal information stay on your device.
+            </p>
+          </section>
+
+          <section style={sectionStyle}>
+            <h2 style={h2Style}>Usage Analytics</h2>
+            <p style={pStyle}>
+              We collect anonymous usage analytics to understand how our apps are
+              used and to make them better. This data is aggregated and is never
+              tied to individual users. We do not track you personally or build
+              any kind of user profile.
             </p>
           </section>
 
           <section style={sectionStyle}>
             <h2 style={h2Style}>Information We Do Not Collect</h2>
             <p style={pStyle}>
-              Our apps do not collect, transmit, or store any personal
-              information on external servers. We do not use analytics services,
-              advertising frameworks, or third-party tracking of any kind.
+              We do not collect, transmit, or store any personal information on
+              external servers. We do not use advertising frameworks or
+              third-party tracking.
             </p>
             <p style={pStyle}>
               Specifically, we do not collect:
@@ -100,7 +112,6 @@ export default function PrivacyPage() {
               <li style={{ marginBottom: 6 }}>Names, email addresses, or contact information</li>
               <li style={{ marginBottom: 6 }}>Location data</li>
               <li style={{ marginBottom: 6 }}>Device identifiers or advertising IDs</li>
-              <li style={{ marginBottom: 6 }}>Usage analytics or behavioral data</li>
               <li style={{ marginBottom: 6 }}>Health, financial, or biometric data</li>
             </ul>
           </section>
@@ -131,18 +142,19 @@ export default function PrivacyPage() {
           <section style={sectionStyle}>
             <h2 style={h2Style}>Third-Party Services</h2>
             <p style={pStyle}>
-              Our apps do not integrate with third-party services that collect
-              user data. We do not use ad networks, analytics platforms, or
-              social media SDKs.
+              Our apps do not integrate with ad networks or social media SDKs.
+              We may use third-party analytics services to collect the anonymous
+              usage data described above. These services do not receive any
+              personally identifiable information.
             </p>
           </section>
 
           <section style={sectionStyle}>
             <h2 style={h2Style}>Children&apos;s Privacy</h2>
             <p style={pStyle}>
-              Our apps do not knowingly collect information from children under
-              13. Because we don&apos;t collect personal information from anyone,
-              this applies equally to all users.
+              Our apps do not knowingly collect personal information from
+              children under 13. The anonymous usage analytics we collect are
+              not attributed to any individual user, regardless of age.
             </p>
           </section>
 
