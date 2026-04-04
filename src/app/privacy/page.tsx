@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy — Brekky Labs",
+  title: "Privacy Policy | Brekky Labs",
   description: "Privacy policy for Brekky Labs apps and services.",
 };
 

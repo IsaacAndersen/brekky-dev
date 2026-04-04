@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Support — Brekky Labs",
+  title: "Support | Brekky Labs",
   description: "Get help with Brekky Labs apps.",
 };
 
@@ -121,9 +121,8 @@ export default function SupportPage() {
                 <a href="/heyo" style={{ color: "inherit", textDecoration: "none" }}>heyo</a>
               </h3>
               <p style={{ ...body, fontSize: 15, lineHeight: "24px", marginBottom: 12 }}>
-                heyo blocks selected apps until you message a friend. Pick the
-                people, pick the apps — one text and everything opens back up.
-                Stay close to the people who matter.
+                heyo blocks other apps until you message your friends first.
+                No complicated setup. Just a tool to keep you connected.
               </p>
               <p style={{ ...body, fontSize: 14, opacity: 0.6 }}>
                 <a href="https://apps.apple.com/app/id6761399207" target="_blank" rel="noopener noreferrer" style={{ color: "inherit" }}>
