@@ -69,7 +69,7 @@ export default function PrivacyPage() {
             Privacy Policy
           </h1>
           <p style={{ ...body, fontSize: 14, opacity: 0.5, marginBottom: 32 }}>
-            Effective date: April 3, 2026
+            Effective date: April 5, 2026
           </p>
 
           <section style={sectionStyle}>
@@ -91,10 +91,12 @@ export default function PrivacyPage() {
           <section style={sectionStyle}>
             <h2 style={h2Style}>Usage Analytics</h2>
             <p style={pStyle}>
-              We collect anonymous usage analytics to understand how our apps are
-              used and to make them better. This data is aggregated and is never
-              tied to individual users. We do not track you personally or build
-              any kind of user profile.
+              Some of our apps collect anonymous usage analytics to understand
+              how they are used and to make them better. This includes events
+              like which features are used and where people get stuck. We use a
+              random anonymous identifier to distinguish devices, but this is
+              not linked to your identity in any way. We do not build user
+              profiles or track you across apps.
             </p>
           </section>
 
@@ -111,18 +113,21 @@ export default function PrivacyPage() {
             <ul style={{ ...body, fontSize: 16, lineHeight: "26px", marginBottom: 12, paddingLeft: 24 }}>
               <li style={{ marginBottom: 6 }}>Names, email addresses, or contact information</li>
               <li style={{ marginBottom: 6 }}>Location data</li>
-              <li style={{ marginBottom: 6 }}>Device identifiers or advertising IDs</li>
+              <li style={{ marginBottom: 6 }}>Apple device identifiers or advertising IDs</li>
               <li style={{ marginBottom: 6 }}>Health, financial, or biometric data</li>
+              <li style={{ marginBottom: 6 }}>Message content, phone numbers, or contacts</li>
             </ul>
           </section>
 
           <section style={sectionStyle}>
             <h2 style={h2Style}>Data Stored on Your Device</h2>
             <p style={pStyle}>
-              Our apps may store data locally on your device to provide their
-              core functionality. For example, One Task stores your tasks,
-              timers, reflections, and focus statistics in on-device storage.
-              This data never leaves your device and is not accessible to us.
+              Our apps store data locally on your device to provide their core
+              functionality. For example, One Task stores your tasks, timers,
+              reflections, and focus statistics on-device. heyo stores your
+              contact list, settings, streak history, and outreach stats
+              on-device. This data never leaves your device and is not
+              accessible to us.
             </p>
             <p style={pStyle}>
               If you delete an app, all locally stored data is removed with it.
@@ -143,9 +148,13 @@ export default function PrivacyPage() {
             <h2 style={h2Style}>Third-Party Services</h2>
             <p style={pStyle}>
               Our apps do not integrate with ad networks or social media SDKs.
-              We may use third-party analytics services to collect the anonymous
-              usage data described above. These services do not receive any
-              personally identifiable information.
+              For anonymous usage analytics, we use{" "}
+              <a href="https://posthog.com/privacy" style={{ color: "var(--color-brand-text)" }}>
+                PostHog
+              </a>
+              . PostHog receives only anonymous event data and does not receive
+              any personally identifiable information. No data is sold or shared
+              with advertisers.
             </p>
           </section>
 
