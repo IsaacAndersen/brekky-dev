@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import { PostHogTracker } from "../_components/posthog-tracker";
+import { TrackedAppStoreBadge } from "../_components/tracked-app-store-badge";
 
 export const metadata: Metadata = {
   title: "1Task: Focus timer | One thing at a time",
@@ -18,23 +20,6 @@ const body = {
 } as const;
 
 const APP_STORE_URL = "https://apps.apple.com/app/id6756553551";
-
-function AppStoreBadge() {
-  return (
-    <a
-      href={APP_STORE_URL}
-      target="_blank"
-      rel="noopener noreferrer"
-      style={{ display: "inline-block", transition: "opacity 0.2s" }}
-    >
-      <img
-        src="/app-store-badge.svg"
-        alt="Download on the App Store"
-        style={{ height: 54 }}
-      />
-    </a>
-  );
-}
 
 function Step({
   number,
@@ -105,6 +90,10 @@ function Feature({ title, description }: { title: string; description: string })
 export default function OneTaskPage() {
   return (
     <div style={{ minHeight: "100vh", display: "flex", flexDirection: "column" }}>
+      <PostHogTracker
+        apiKey="phc_oJ2h3UmkjoJ3rqpG5kpLYD3kqSiCmJTTGXvjJ8AScM27"
+        apiHost="https://1task.brekky.dev"
+      />
       {/* Header */}
       <header
         style={{
@@ -191,7 +180,7 @@ export default function OneTaskPage() {
             1Task is a focus timer for iOS. Work on one thing at a time,
             then reflect on how it went.
           </p>
-          <AppStoreBadge />
+          <TrackedAppStoreBadge href={APP_STORE_URL} />
 
           {/* Screenshots */}
           <div
@@ -388,7 +377,7 @@ export default function OneTaskPage() {
           >
             One thing at a time.
           </h2>
-          <AppStoreBadge />
+          <TrackedAppStoreBadge href={APP_STORE_URL} />
         </section>
       </main>
 

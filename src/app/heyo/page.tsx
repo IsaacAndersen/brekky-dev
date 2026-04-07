@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import { PostHogTracker } from "../_components/posthog-tracker";
+import { TrackedAppStoreBadge } from "../_components/tracked-app-store-badge";
 
 export const metadata: Metadata = {
   title: "heyo: reach out",
@@ -57,6 +59,10 @@ export default function HeyoPage() {
         color: "#2d2d2a",
       }}
     >
+      <PostHogTracker
+        apiKey="phc_zyHjQGdFJdZxVtxWK7eR7qwsFMn6jcF3jtYNxo9T38dh"
+        apiHost="https://heyo.brekky.dev"
+      />
       {/* Header */}
       <header
         style={{
@@ -142,18 +148,7 @@ export default function HeyoPage() {
             the people, pick the apps. One text and everything opens
             back up.
           </p>
-          <a
-            href="https://apps.apple.com/app/id6761399207"
-            target="_blank"
-            rel="noopener noreferrer"
-            style={{ display: "inline-block", transition: "opacity 0.2s" }}
-          >
-            <img
-              src="/app-store-badge.svg"
-              alt="Download on the App Store"
-              style={{ height: 54 }}
-            />
-          </a>
+          <TrackedAppStoreBadge href="https://apps.apple.com/app/id6761399207" />
 
           {/* Screenshots */}
           <div
@@ -241,18 +236,7 @@ export default function HeyoPage() {
           >
             One message to start the day.
           </h2>
-          <a
-            href="https://apps.apple.com/app/id6761399207"
-            target="_blank"
-            rel="noopener noreferrer"
-            style={{ display: "inline-block", transition: "opacity 0.2s" }}
-          >
-            <img
-              src="/app-store-badge.svg"
-              alt="Download on the App Store"
-              style={{ height: 54 }}
-            />
-          </a>
+          <TrackedAppStoreBadge href="https://apps.apple.com/app/id6761399207" />
         </section>
       </main>
 

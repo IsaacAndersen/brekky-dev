@@ -137,10 +137,13 @@ export default function PrivacyPage() {
           <section style={sectionStyle}>
             <h2 style={h2Style}>Website</h2>
             <p style={pStyle}>
-              Our website at brekky.dev does not use cookies, analytics, or
-              tracking scripts. If you contact us through our contact form or
-              support email, we will only use your information to respond to your
-              inquiry.
+              Our product pages at brekky.dev/1task and brekky.dev/heyo use
+              anonymous analytics (powered by PostHog) to understand page visits
+              and App Store link clicks. No cookies are stored and no personally
+              identifiable information is collected. Other pages on brekky.dev do
+              not use analytics or tracking scripts. If you contact us through
+              our contact form or support email, we will only use your
+              information to respond to your inquiry.
             </p>
           </section>
 
